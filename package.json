@@ -1,0 +1,59 @@
+{
+    "name": "@landra_sistemas/lisco_hydra",
+    "description": "Microservices module for lisco based on Hydra.",
+    "version": "0.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "landra-sistemas",
+        "url": "https://github.com/landra-sistemas"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/landra-sistemas/lisco_hydra.git"
+    },
+    "bugs": {
+        "url": "https://github.com/landra-sistemas/lisco_hydra/issues"
+    },
+    "source": "src/index.mjs",
+    "exports": {
+        "require": "./dist/lisco_hydra.cjs",
+        "default": "./dist/lisco_hydra.modern.js"
+    },
+    "type": "module",
+    "main": "./dist/lisco_hydra.cjs",
+    "module": "./dist/lisco_hydra.esm.js",
+    "unpkg": "./dist/lisco_hydra.umd.js",
+    "scripts": {
+        "build": "microbundle --compress false",
+        "dev": "microbundle watch --compress false",
+        "test": "c8 --reporter=lcov mocha test --exit",
+        "clean": "rimraf node_modules",
+        "preversion": "npm install && npm test -- --watchAll=false",
+        "version": "npm run build && git add -A",
+        "postversion": "git push --follow-tags && npm publish --access public",
+        "release:patch": "npm version patch -m \"Bump version %s\"",
+        "release:minor": "npm version minor -m \"Bump version %s\"",
+        "release:major": "npm version major -m \"Bump version %s\"",
+        "release:alpha": "npm version prerelease --preid=alpha -m \"Bump version %s\"",
+        "release:beta": "npm version prerelease --preid=beta -m \"Bump version %s\"",
+        "release:rc": "npm version prerelease --preid=rc -m \"Bump version %s\""
+    },
+    "devDependencies": {
+        "c8": "^7.11.2",
+        "chai": "^4.3.6",
+        "microbundle": "^0.15.0",
+        "mocha": "^9.2.1",
+        "rimraf": "^3.0.2"
+    },
+    "dependencies": {
+        "hydra": "^1.9.2",
+        "hydra-integration": "^1.0.3",
+        "lodash": "^4.17.21",
+        "util": "^0.12.4",
+        "xregexp": "^5.1.0"
+    },
+    "peerDependencies": {
+        "@landra_sistemas/lisco": "^0.2.0",
+        "express": "^4.18.1"
+    }
+}
