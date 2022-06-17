@@ -1,7 +1,8 @@
 # Lisco Hydra
 
-Módulo de gestión de microservicios basado en [Hydra](https://www.hydramicroservice.com/) para [lisco](https://github.com/landra-sistemas/lisco).
+![alt](./logo.png)
 
+Módulo de gestión de microservicios basado en [Hydra](https://www.hydramicroservice.com/) para [lisco](https://github.com/landra-sistemas/lisco).
 
 
  Lisco es un framework basado en express el cual, de forma nativa, no dispone de la capacidad de escalar horizontalmente en diferentes nodos. Dispone del sistema de cluster de nodejs pero esto solo permite aumentar la cantidad de procesos activos en el mismo nodo. 
