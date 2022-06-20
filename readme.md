@@ -74,6 +74,52 @@ module.exports = () => {
 Mediante estas modificaciones se sobreescribe el comportamiento de forma que Hydra controle el arranque del mismo.
 
 
+### Instalar redis
+
+Hydra necesita redis para la gestión de los nodos y su intercomunicación. Para esto se puede usar docker:
+
+``` bash
+> docker run --name some-redis -d redis
+```
+
+Ver mas info sobre formas de instalarlo **[Aquí](https://www.hydramicroservice.com/docs/quick-start/step1.html)**
+
+### Hydra CLI
+
+La herramienta de comandos Hydra CLI se puede usar para interactuar con el sistema. Para ello se debe instalar:
+
+``` bash
+> npm install -g hydra-cli
+```
+
+Una vez instalada es necesario realizar la configuración de la herramienta para conectarla con el servidor de redis:
+
+``` bash
+> hydra-cli config
+redisUrl: 127.0.0.1
+redisPort: 6379
+redisDb: 15
+```
+
+### Hydra Router
+
+Mediante el Router se pueden redirigir, sin necesidad de implementar un gateway, mensajes entre los diferentes servicios conectados. Dispone también de una interfaz sencilla para la visualización de los servicios activos.
+
+Para instalarlo es **necesario docker**.
+
+``` bash
+> docker run -d -p 5353:5353 --add-host host:10.1.1.175 --name hydra-router flywheelsports/hydra-router:1.3.3
+```
+
+Una vez instalado, el dashboard es accesible de la siguiente forma:
+
+```
+http://localhost:5353/
+```
+
+Se puede consultar mas información sobre cómo utilizar las herramientas del router **[Aquí](https://www.hydramicroservice.com/docs/tools/hydra-router/introduction.html)**
+
+
 ## Uso
 
 El uso del módulo dependerá en gran medida de la estrategia usada y la arquitectura elegida. Hydra puede gestionar la comunicación entre nodos de forma que los microservicios puedan comunicarse entre sí.
