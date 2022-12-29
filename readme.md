@@ -1,4 +1,6 @@
 # Lisco Hydra
+![npm](https://img.shields.io/npm/v/@landra_sistemas/lisco_hydra?label=version)
+![GitHub](https://img.shields.io/github/license/landra-sistemas/lisco_hydra)
 
 ![alt](./logo.png)
 
@@ -143,3 +145,20 @@ Otra posibilidad podría ser utilizar el sistema de mensajería de Hydra para qu
 
 La elección de la arquitectura dependerá de las necesidades. En esta web se puede encontrar mucha información al respecto y estrategias tanto de división como de implementación: [Microservicios](https://microservices.io/patterns/microservices.html)
 
+
+
+## Plugins interesantes
+
+Hydra dispone de un sistema de plugins registrables "at runtime" para extender su comportamiento. Durante las pruebas se han encontrado una serie de plugins que pueden ser registrados y aportar funcionalidades interesantes:
+
+- https://github.com/jkyberneees/hydra-plugin-http - Plugin para simplificar la creación de gateways de forma que centralice las llamadas API a los diferentes servicios conectados.
+- https://github.com/pnxtech/hydra-plugin-hls - Logger para centralizar los logs en HLS (Hydra Logging Service). 
+
+
+## Ayuda
+
+En el siguiente repo existe un tutorial creado por el desarrollador principal del sistema:
+
+- https://github.com/cjus/hydra-tutorial
+
+En el se puede encontrar los pasos para iniciar redis, hydra-router y crear varios servicios que hablen entre si.
