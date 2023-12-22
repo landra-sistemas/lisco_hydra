@@ -1,7 +1,7 @@
 {
     "name": "@landra_sistemas/lisco_hydra",
     "description": "Microservices module for lisco based on Hydra.",
-    "version": "0.0.1-rc.1",
+    "version": "0.0.1-rc.2",
     "license": "MIT",
     "author": {
         "name": "landra-sistemas",
