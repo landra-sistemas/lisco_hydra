@@ -39,14 +39,14 @@
         "release:rc": "npm version prerelease --preid=rc -m \"Bump version %s\""
     },
     "devDependencies": {
-        "c8": "^7.12.0",
-        "chai": "^4.3.7",
+        "c8": "^8.0.1",
+        "chai": "^4.3.10",
         "microbundle": "^0.15.1",
         "mocha": "^10.2.0",
-        "rimraf": "^3.0.2"
+        "rimraf": "^5.0.5"
     },
     "dependencies": {
-        "hydra": "^1.9.2",
+        "hydra": "^1.9.3",
         "hydra-integration": "^1.0.3",
         "lodash": "^4.17.21",
         "util": "^0.12.5",
